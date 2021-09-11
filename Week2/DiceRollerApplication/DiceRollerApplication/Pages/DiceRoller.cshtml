@@ -1,0 +1,37 @@
+﻿@page
+@model DiceRollerApplication.Pages.DiceRollerModel
+@{
+    int randomNumber = new Random().Next(1, 7); //GENERATES NUMBER BETWEEN 1 and 6
+    int winningNumber = 5;
+}
+<h4>Current Random Number = @randomNumber</h4>
+@if (randomNumber == winningNumber)
+{
+    <div class="alert alert-success">
+        <h4>You win</h4>
+    </div>
+}
+else
+{
+    <div class="alert alert-danger">
+        <h4><strong>You Loose</strong></h4>
+    </div>
+    @if (randomNumber > winningNumber)
+    {
+<div class="alert alert-info">
+    <h4>@(randomNumber - winningNumber) off</h4>
+</div>
+        }
+        else
+        {
+<div class="alert alert-info">
+    <h4> @(winningNumber - randomNumber) off</h4>
+</div>
+    }
+
+    }
+
+
+
+
+
