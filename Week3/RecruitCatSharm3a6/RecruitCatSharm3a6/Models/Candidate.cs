@@ -21,9 +21,9 @@ namespace RecruitCatSharm3a6.Models
 
         public string Gender { get; set; }
 
-        public decimal BonusGiven { get; set; }
+        public decimal? BonusGiven { get; set; }
 
-        public bool? ReadyToRelocate { get; set; }
+        public bool ReadyToRelocate { get; set; }
 
         public Company Company { get; set; }
 

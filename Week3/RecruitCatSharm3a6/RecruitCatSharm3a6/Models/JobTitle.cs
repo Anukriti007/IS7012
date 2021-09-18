@@ -8,7 +8,7 @@ namespace RecruitCatSharm3a6.Models
     public class JobTitle
     {
         public int Id { get; set; }
-        public string Designation { get; set; }
+        public int WorkingHours { get; set; }
         public decimal MiniSalary { get; set; }
         public decimal MaxSalary { get; set; }
         public string Title { get; set; }
